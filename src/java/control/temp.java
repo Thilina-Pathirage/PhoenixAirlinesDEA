@@ -46,10 +46,7 @@ public class temp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-        PrintWriter out = response.getWriter();
-        
-        out.print("Testing Servlet");
+       processRequest(request, response);
     }
 
     /**
@@ -65,10 +62,9 @@ public class temp extends HttpServlet {
             throws ServletException, IOException {
         
         PrintWriter out = response.getWriter();
-        
         String name = request.getParameter("stdname");
         out.println(name);
-        processRequest(request, response);
+        //processRequest(request, response);
     }
 
     /**
