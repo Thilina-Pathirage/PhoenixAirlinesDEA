@@ -7,3 +7,24 @@ and open the template in the editor.
     Created on : Apr 13, 2021, 10:36:45 AM
     Author     : User
 */
+.nav-logo{
+    width: 25px;
+    margin-left: 5px;
+}
+
+.nav-name{
+    margin-left: 5px;
+}
+
+.parallax-home{
+    height: 500px;
+    background: linear-gradient(to right ,rgba(0, 0, 0, 0.397)30%,rgba(0, 97, 161, 0.521)100%), url('./images/parallax-img.png');
+    background-size: cover;
+}
+
+.main-title{
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
