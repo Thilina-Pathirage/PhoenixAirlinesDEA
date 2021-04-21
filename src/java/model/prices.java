@@ -35,10 +35,5 @@ public class prices {
             priceList.add(resultSet.getString("price"));
         }
         return priceList;
-    }
-
-    public void calTotal(String pass, float priceForEach) {
-        prices gp = new prices();
-    }
-    
+    } 
 }

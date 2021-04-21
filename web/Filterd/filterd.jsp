@@ -46,6 +46,7 @@
         String passe = (String) request.getAttribute("passen");
         String Fclass = (String) request.getAttribute("class");
         String totPrice = (String) request.getAttribute("totPrice");
+        String FlightId =(String) request.getAttribute("flightID");
         %>
         
         <div class="container mt-5">
@@ -59,7 +60,17 @@
                           <p class="card-text">
                             With supporting text below as a natural lead-in to additional content.
                           </p>
-                          <a href="#" class="btn btn-primary">Book your Ticket Now</a>
+                          <form action="./AddTickets" method="POST">
+                              <input type="hidden" name="avseats" value="<%=avSeats%>" />
+                              <input type="hidden" name="desti" value="<%=destination%>" />
+                              <input type="hidden" name="date" value="<%=date%>" />
+                              <input type="hidden" name="passe" value="<%=passe%>" />
+                              <input type="hidden" name="Fclass" value="<%=Fclass%>" />
+                              <input type="hidden" name="price" value="<%=totPrice%>" />
+                              <input type="hidden" name="flightId" value="<%=FlightId%>" />
+                              
+                              <input type="submit" class="btn btn-primary" value="Book your Ticket Now">
+                          </form>
                         </div>
                     </div>
                           
