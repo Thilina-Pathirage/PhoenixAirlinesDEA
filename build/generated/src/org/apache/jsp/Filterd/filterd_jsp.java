@@ -1,10 +1,14 @@
-package org.apache.jsp;
+package org.apache.jsp.Filterd;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Connection;
+import model.dbcon;
 
-public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class filterd_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -13,7 +17,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   static {
     _jspx_dependants = new java.util.ArrayList<String>(1);
-    _jspx_dependants.add("/./navbar.jsp");
+    _jspx_dependants.add("/Filterd/../navbar.jsp");
   }
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
@@ -49,13 +53,16 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <title>JSP Page</title>\r\n");
-      out.write("        \r\n");
-      out.write("        <!-- Font Awesome -->\r\n");
+      out.write("         <!-- Font Awesome -->\r\n");
       out.write("        <link\r\n");
       out.write("          href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css\"\r\n");
       out.write("          rel=\"stylesheet\"\r\n");
@@ -78,9 +85,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        ></script>\r\n");
       out.write("        \r\n");
       out.write("        <!-- CSS Links -->\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"./home.css\">\r\n");
-      out.write("        \r\n");
-      out.write("        \r\n");
+      out.write("        <link rel=\"stylesheet\" href=\"../home.css\">\r\n");
       out.write("    </head>\r\n");
       out.write("    <body>\r\n");
       out.write("        ");
@@ -118,40 +123,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</nav>");
       out.write("\r\n");
       out.write("        \r\n");
-      out.write("        <div class=\"parallax-home\" >\r\n");
-      out.write("            <h1 class=\"main-title\" >BOOK A FLIGHT</h1>\r\n");
-      out.write("        </div>\r\n");
-      out.write("        <br>\r\n");
-      out.write("        <br>\r\n");
-      out.write("        <br>\r\n");
-      out.write("        \r\n");
-      out.write("        <center>\r\n");
-      out.write("            <h2>Book Here</h2>\r\n");
-      out.write("            <form action=\"./SearchFlight\" method=\"POST\">\r\n");
-      out.write("            <input type=\"text\" placeholder=\"destination\" name=\"destination\" style=\"margin-bottom: 5px\"> <br>\r\n");
-      out.write("            <input type=\"text\" placeholder=\"passengers\" name=\"passengers\" style=\"margin-bottom: 5px\"> <br>\r\n");
-      out.write("            <select name=\"class\" style=\"margin-bottom: 5px\">\r\n");
-      out.write("                <option value=\"\">Select Class</option>\r\n");
-      out.write("                <option value=\"firstclass\">firstclass</option>\r\n");
-      out.write("                <option value=\"businessclass\">businessclass</option>\r\n");
-      out.write("                <option value=\"economyclass\">economyclass</option>\r\n");
-      out.write("            </select>\r\n");
-      out.write("            <br>\r\n");
-      out.write("            <input type=\"date\" placeholder=\"Depart Date\" name=\"departDate\" style=\"margin-bottom: 5px\"> <br>\r\n");
-      out.write("           \r\n");
-      out.write("            <input type=\"submit\" value=\"Search\">\r\n");
-      out.write("                       \r\n");
-      out.write("        </form>\r\n");
-      out.write("        </center>\r\n");
-      out.write("    \r\n");
-      out.write("        <br>\r\n");
-      out.write("        <br>\r\n");
-      out.write("        <br><br>\r\n");
-      out.write("        <br>\r\n");
-      out.write("        <br><br>\r\n");
-      out.write("        <br>\r\n");
-      out.write("        <br>\r\n");
-      out.write("       \r\n");
       out.write("    </body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {

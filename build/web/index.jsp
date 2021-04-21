@@ -39,37 +39,41 @@
         
     </head>
     <body>
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <image src="./images/Logo.png" class="nav-logo"/>
-                    <span class="nav-name"> Phoenix Airlines </span>
-                </a> 
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-mdb-toggle="collapse"
-                  data-mdb-target="#navbarNavAltMarkup"
-                  aria-controls="navbarNavAltMarkup"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Flights</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-user"></i>
-                    </a>
-                  </div>
-                </div>
-          </div>
-        </nav>
+        <%@ include file="./navbar.jsp"%>
+        
         <div class="parallax-home" >
             <h1 class="main-title" >BOOK A FLIGHT</h1>
         </div>
+        <br>
+        <br>
+        <br>
+        
+        <center>
+            <h2>Book Here</h2>
+            <form action="./SearchFlight" method="POST">
+            <input type="text" placeholder="destination" name="destination" style="margin-bottom: 5px"> <br>
+            <input type="text" placeholder="passengers" name="passengers" style="margin-bottom: 5px"> <br>
+            <select name="class" style="margin-bottom: 5px">
+                <option value="">Select Class</option>
+                <option value="firstclass">firstclass</option>
+                <option value="businessclass">businessclass</option>
+                <option value="economyclass">economyclass</option>
+            </select>
+            <br>
+            <input type="date" placeholder="Depart Date" name="departDate" style="margin-bottom: 5px"> <br>
+           
+            <input type="submit" value="Search">
+                       
+        </form>
+        </center>
+    
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+       
     </body>
 </html>
