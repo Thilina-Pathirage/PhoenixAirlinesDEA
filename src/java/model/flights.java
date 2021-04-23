@@ -5,6 +5,7 @@
  */
 package model;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -36,6 +37,26 @@ public class flights {
             searchList.add(resultSet.getString("date"));
         }
         return searchList;
+    }
+    
+    
+    public boolean updateAVSeats(String Fclass, int Seats, int passe, String flightid) {
+        
+        int avSeats = Seats - passe;
+        
+        String AvSeats = String.valueOf(avSeats);
+        
+        try{
+            PreparedStatement ps = con.connection().prepareStatement("UPDATE flights SET "+ Fclass +"= ? WHERE flightid = ?");
+            ps.setString(1, AvSeats);
+            ps.setString(2, flightid);
+            
+            state = ps.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return state == 1;
     }
     
 }
