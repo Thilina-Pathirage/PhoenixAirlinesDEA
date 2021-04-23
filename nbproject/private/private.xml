@@ -3,17 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/web/Admin/admin.jsp</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/web/Profile/profile.jsp</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/web/Staff/staff.jsp</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/src/java/model/prices.java</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/src/java/control/SearchFlight.java</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/src/java/model/flights.java</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/web/index.jsp</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/src/java/control/AddTickets.java</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/web/Tickets/tickets.jsp</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/src/java/model/dbcon.java</file>
-            <file>file:/D:/Year02_sem1/DEA/PhoenixAirline/PhoenixAirlinesDEA/web/Filterd/filterd.jsp</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/src/java/control/AddTickets.java</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/src/java/model/tickets.java</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/src/java/model/flights.java</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/web/index.jsp</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/src/java/control/SearchFlight.java</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/web/Filterd/filterd.jsp</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/web/other/thankyoures.jsp</file>
+            <file>file:/C:/Users/Ruchira%20Kvnd/Downloads/PhoenixAirlinesDEA/src/java/model/prices.java</file>
         </group>
     </open-files>
 </project-private>
