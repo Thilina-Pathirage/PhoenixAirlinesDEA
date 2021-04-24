@@ -14,14 +14,69 @@ and open the template in the editor.
 }
 
 .parallax-home{
-    height: 500px;
-    background: linear-gradient(to right ,rgba(0, 0, 0, 0.397)30%,rgba(0, 97, 161, 0.521)100%), url('./images/parallax-img.png');
+    height: auto;
+    background: linear-gradient(to bottom ,rgba(0, 0, 0, 0.397)30%,rgba(255, 255, 255, 0.400)100%), url('./images/parallax-img.png');
     background-size: cover;
+    padding: 50px 50px 180px 50px ;
+    background-attachment: fixed;
+    
 }
 
 .main-title{
-    padding-top: 30px;
+    padding-bottom:50px;
     text-align: center;
     color: white;
-    font-size: 100px;
+    font-size: 60px;
+    font-family: ubuntu;
+}
+.form1{
+    text-align: center;
+    padding: 10px
+}
+
+.dropdown
+{
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.4);
+    
+    
+}
+.cont
+{
+  background: linear-gradient(to bottom ,rgba(0, 0, 0, 0)30%,rgba(0, 153, 255, 0.342)100%);  
+  text-align: center;
+  padding: 50px;
+  padding-bottom: 150px;
+  box-shadow: 0px -8px 25px rgba(0, 0, 0, 0.300) ;
+}
+.header{
+ margin-bottom: 50px;
+}
+.slog{
+    color: rgba(0, 153, 255,1);
+}
+.content
+{
+    font-size: 18px;
+}
+.body-logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: -150px;
+    box-shadow: -8px -8px 15px rgba(0, 0, 0, 0.400) ;
+}
+.footer{
+    background-color: black;
+}
+
+.footer-logo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 30px;
+    box-shadow: 0px 0px 30px rgba(0, 153, 255, 0.742);
 }
