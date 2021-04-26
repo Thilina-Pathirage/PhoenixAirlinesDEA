@@ -1,0 +1,59 @@
+
+.nav-logo{
+    width: 25px;
+    margin-left: 5px;
+}
+
+.nav-name{
+    margin-left: 5px;
+}
+
+.parallax-home{
+    height: 500px;
+    background: linear-gradient(to right ,rgba(0, 0, 0, 0.397)30%,rgba(0, 97, 161, 0.521)100%), url('./images/parallax-img.png');
+    background-size: cover;
+}
+
+.main-title{
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+}
+
+.forms{
+    width: 400px;
+}
+
+.loginfrm{
+  
+     padding: 20px;
+    margin: 20px;
+    border-radius: 14px;
+   
+    box-shadow: 3px 3px 15px 5px #888888;
+}
+
+h2{
+   
+  
+}
+
+
+
+
+
+
+
+
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 26, 2021, 12:33:17 PM
+    Author     : Hiruna
+*/
+
