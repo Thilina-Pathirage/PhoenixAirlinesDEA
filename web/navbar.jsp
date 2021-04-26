@@ -35,6 +35,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
             <a class="nav-link" href="#">Flights</a>
             <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="login.jsp">Login</a>
             <a class="nav-link" href="#">
                 <i class="fas fa-user"></i>
             </a>
