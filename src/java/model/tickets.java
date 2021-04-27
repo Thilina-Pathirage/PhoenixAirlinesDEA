@@ -55,5 +55,19 @@ public class tickets {
         return state == 1;
     }
 
+    public boolean ticketDelete(String ticketid) {
+        try{
+            PreparedStatement ps = con.connection().prepareStatement("DELETE FROM tiskets WHERE ticketid=?");
+            
+            ps.setString(1, ticketid);
+            
+            state = ps.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return state == 1;
+    }
+
     
 }

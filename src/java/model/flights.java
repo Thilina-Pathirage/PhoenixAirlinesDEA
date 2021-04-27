@@ -58,5 +58,50 @@ public class flights {
         
         return state == 1;
     }
-    
+
+    public boolean addFlight(String desti, String date) {
+        String seats = "100";
+        try{
+            PreparedStatement ps = con.connection().prepareStatement("INSERT INTO flights(firstclass,businessclass,economyclass,destination,date) VALUES(?, ?, ?, ?, ?)");
+            ps.setString(1, seats);
+            ps.setString(2, seats);
+            ps.setString(3, seats);
+            ps.setString(4, desti);
+            ps.setString(5, date);
+
+            state = ps.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return state == 1;
+    }
+
+    public boolean flightDelete(String flightid) {
+         try{
+            PreparedStatement ps = con.connection().prepareStatement("DELETE FROM flights WHERE flightid=?");
+            
+            ps.setString(1, flightid);
+            
+            state = ps.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return state == 1;
+    }
+
+    public boolean flightUpdate(String flightid, String destination, String date) {
+         try{
+            PreparedStatement ps = con.connection().prepareStatement("UPDATE flights SET destination=?, date=? WHERE flightid=?");
+            ps.setString(1, destination);
+            ps.setString(2, date);
+            ps.setString(3, flightid);
+            
+            state = ps.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return state == 1;
+    }
 }

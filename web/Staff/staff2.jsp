@@ -82,108 +82,14 @@ ResultSet resultSet = null;
         <div class="container mt-5">
             <div style="text-align: center" class="row">
             <div class="col-lg-12">
-                <h1 style="font-weight: bolder;">Admin Dashboard</h1>
+                <h1 style="font-weight: bolder;">Staff Grade Two Dashboard</h1>
             </div>
         </div>
             <br>
         
         <div class="row d-flex justify-content-center">
             
-            <div class="col-xl-3 col-lg-6 col-md-6">
-             <div class="card" style="margin-bottom: 30px; height: 380px; ">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <!--                  <img
-                    src="./images/20382870.jpg"
-                    class="img-fluid"
-                  />-->
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><strong>Add New Admin</strong></h5>
-                  <p class="card-text">
-                    We a happy to see the your face in our flights
-                  </p>
-                  <form action="../addAdmin" method="POST">
-                      <input type="hidden" value="admin" name="position"/>
-                      <input type="text" class="form-control"  placeholder="Username (ends with 0)" aria-label="Username" name="uname" aria-describedby="addon-wrapping" /> <br>
-                      <input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping" name="email" /> <br>
-                      <input type="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="addon-wrapping" name="password" /> <br>
-                      <input type="submit" class="btn btn-primary" value="Add"/>
-                  </form>
-                  
-                </div>
-             </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-6 col-md-6">
-             <div class="card" style="margin-bottom: 30px;  height: 380px">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-<!--                  <img
-                    src="./images/20382870.jpg"
-                    class="img-fluid"
-                  />-->
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><strong>Add New Grade One Staff</strong></h5>
-                  <p class="card-text">
-                    We a happy to see the your face in our flights
-                  </p>
-                  <form action="../addAdmin" method="POST">
-                      <input type="hidden" value="stg1" name="position"/>
-                      <input type="text" class="form-control"  placeholder="Username (ends with 1)" aria-label="Username" name="uname" aria-describedby="addon-wrapping" /> <br>
-                      <input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping" name="email" /> <br>
-                      <input type="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="addon-wrapping" name="password" /> <br>
-                      <input type="submit" class="btn btn-primary" value="Add"/>
-                  </form>
-                </div>
-             </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-6 col-md-6">
-             <div class="card" style="margin-bottom: 30px;  height: 380px">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-<!--                  <img
-                    src="./images/20382870.jpg"
-                    class="img-fluid"
-                  />-->
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><strong>Add New Grade Two Staff</strong></h5>
-                  <p class="card-text">
-                    We a happy to see the your face in our flights
-                  </p>
-                  <form action="../addAdmin" method="POST">
-                      <input type="hidden" value="stg2" name="position"/>
-                      <input type="text" class="form-control"  placeholder="Username (ends with 2)" aria-label="Username" name="uname" aria-describedby="addon-wrapping" /> <br>
-                      <input type="email" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="addon-wrapping" name="email" /> <br>
-                      <input type="password" class="form-control" placeholder="password" aria-label="Username" aria-describedby="addon-wrapping" name="password" /> <br>
-                      <input type="submit" class="btn btn-primary" value="Add"/>
-                  </form>
-                </div>
-             </div>
-            </div>
-                  
-            <div class="col-xl-3 col-lg-6 col-md-6">
-             <div class="card" style="margin-bottom: 30px; height: 380px">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                  <img
-                    src="https://img.freepik.com/free-vector/search-concept-illustration_114360-95.jpg?size=338&ext=jpg"
-                    class="img-fluid"
-                  />
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><strong>Search User By ID</strong></h5>
-                    <form action="../searchbyid.jsp">
-                        <input type="text" class="form-control" placeholder="Enter user ID" aria-label="userid" aria-describedby="addon-wrapping" name="userid"  required/>
-                  <br>
-                  <input type="submit" class="btn btn-primary" value="Search">
-                    </form>
-                </div>
-             </div>
-            </div>   
+            
           </div>
          </div>
         </div>
@@ -203,7 +109,6 @@ ResultSet resultSet = null;
                     <th>Seats 3rd Class</th>
                     <th>Destination</th>
                     <th>Date</th>
-                    <th>Delete</th>
                 </tr>
             </thead>
             
@@ -224,54 +129,16 @@ ResultSet resultSet = null;
                     <td><%=resultSet.getString("economyclass")%></td>
                     <td><%=resultSet.getString("destination")%></td>
                     <td><%=resultSet.getString("date")%></td>
-                    <td>
-                        <form action="../deleteFlight" method="POST">
-                            <input type="hidden" name="flightid" value="<%=resultSet.getString("flightid")%>">
-                            <input type="submit" value="Delete" class="btn btn-dark"/>
-                        </form>
-                    </td>
+                    
                 </tr>
             </tbody>
-
             <%
                 }
             %>
         </table>
     
     <br> 
-    <br>
-    <hr>
-            <div class="col-xl-12">
-             <div class="card" style=" margin: 30px; height: 420px">
-                <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-
-                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title"><strong>Update Flight</strong></h5>
-                    <br>
-                  
-                  <form action="../updateFlight" method="POST">
-                      Flight ID
-                      <input type="text" class="form-control" placeholder="12003" aria-label="flightid" aria-describedby="addon-wrapping" name="flightid" /> <br>
-                      Destination
-                      <select name="destination" class="form-select" aria-label="Default select example">
-                          <option value="">Select</option>
-                          <option value="india">Sri Lanka - India</option>
-                          <option value="dubai">Sri Lanka - Dubai</option>
-                          <option value="Australia">Sri Lanka - Australia</option>
-                      </select> <br>
-                      Date
-                      <input type="date" class="form-control"  aria-label="Username" aria-describedby="addon-wrapping" name="date" /> <br>
-                      <input type="submit" class="btn btn-primary" value="Update"/><br>
-                      
-                  </form>
-                </div>
-             </div>
-            </div>
     
-    <br>
-    <hr>
     <br>
             
             <div class="col-xl-12">
@@ -321,7 +188,6 @@ ResultSet resultSet = null;
                     <th>Date</th>
                     <th>Destination</th>
                     <th>Class</th>
-                    <th>Delete</th>
                 </tr>
             </thead>
             
@@ -342,12 +208,7 @@ ResultSet resultSet = null;
                     <td><%=resultSet.getString("date")%></td>
                     <td><%=resultSet.getString("destination")%></td>
                     <td><%=resultSet.getString("class")%></td>
-                    <td>
-                        <form action="../deleteTicket" method="POST">
-                            <input type="hidden" name="tiketid" value="<%=resultSet.getString("ticketid")%>">
-                            <input type="submit" value="Delete" class="btn btn-dark"/>
-                        </form>
-                    </td>
+                   
                 </tr>
             </tbody>
             
