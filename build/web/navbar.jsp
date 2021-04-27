@@ -25,20 +25,24 @@
           data-mdb-toggle="collapse"
           data-mdb-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
+          
           aria-label="Toggle navigation"
         >
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active"  href="#">Home</a>
             <a class="nav-link" href="./Flights/flights.jsp">Flights</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link" href="login.jsp">Login</a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="./price.jsp">Pricing</a>
+            <% 
+        String uname= (String)session.getAttribute("user");
+        if(uname==null){%>
+            <a class="nav-link" href="login.jsp">Login</a> <% }else{%>
+            <a class="nav-link" href="./Profile/profile.jsp">
                 <i class="fas fa-user"></i>
             </a>
+            <% }%>
           </div>
         </div>
   </div>

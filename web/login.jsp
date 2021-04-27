@@ -82,19 +82,19 @@ h2{
                   data-mdb-toggle="collapse"
                   data-mdb-target="#navbarNavAltMarkup"
                   aria-controls="navbarNavAltMarkup"
-                  aria-expanded="false"
+                  
                   aria-label="Toggle navigation"
                 >
                   <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="./index.jsp">Home</a>
+                    <a class="nav-link active"  href="./index.jsp">Home</a>
                     <a class="nav-link" href="#">Flights</a>
                     <a class="nav-link" href="#">Pricing</a>
                       <a class="nav-link" href="./signup.jsp">Sign Up</a>
                     
-                    </a>
+                   
                   </div>
                 </div>
           </div>
@@ -115,7 +115,11 @@ h2{
       <div class="col-sm-9 col-lg-4 col-md-7">
           
         <div class="loginfrm">
-            
+            <% 
+        String uname= (String)session.getAttribute("user");
+        if(uname==null){%>
+        <p style="color:red;"> Please Log in for To do the rest</p>
+              <%  }%>
             <form action="./login" method="POST">
         <br>
         <h2>Sign In</h2><br>
@@ -188,7 +192,7 @@ h2{
                         <br> <br> <br> <br> <br> <br>
     </div>
                    
-        </div>
+     
         
   
             

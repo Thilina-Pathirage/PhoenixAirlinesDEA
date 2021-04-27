@@ -3,17 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/control/addFlight.java</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/control/addAdmin.java</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/control/updateFlight.java</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/web/Staff/staff2.jsp</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/web/Admin/admin.jsp</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/model/flights.java</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/web/searchbyid.jsp</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/web/Staff/staff.jsp</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/control/deleteFlight.java</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/control/deleteTicket.java</file>
-            <file>file:/E:/New%20folder%20(10)/PhoenixAirlinesDEA/src/java/model/tickets.java</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/src/java/model/tickets.java</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/src/java/control/login.java</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Flights/flights.css</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Tickets/tickets.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Filterd/filterd.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Staff/staff2.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/price.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Tickets/tickets.css</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/login.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Filterd/filterd.css</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/index.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/home.css</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/src/java/control/logout.java</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Flights/flights.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Profile/profile.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/src/java/control/AddTickets.java</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/src/java/model/upCheck.java</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/navbar.jsp</file>
+            <file>file:/D:/Year02_sem1/PhoenixAirlinesDEA/web/Profile/profile.css</file>
         </group>
     </open-files>
 </project-private>

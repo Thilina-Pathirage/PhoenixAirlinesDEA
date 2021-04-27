@@ -38,12 +38,11 @@ public class upCheck {
                 
                  while(rs.next())
             {
-             
+                booklist.add(rs.getString("clientid"));
                 booklist.add(rs.getString("uname"));
                 booklist.add(rs.getString("email"));
                 booklist.add(rs.getString("password"));   
             }
-                
                 
             } catch (SQLException ex) {
                 Logger.getLogger(upCheck.class.getName()).log(Level.SEVERE, null, ex);
