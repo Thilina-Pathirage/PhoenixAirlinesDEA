@@ -74,8 +74,8 @@
 </nav>
 
        <div class="flight">
-           <center><h1> Lorem ipsum </h1></center>
-           <center> <p>Some quick example text to build on the card title and make up the bulk of the card's content.<br>Some quick example text <br>to build on the card title and make up the bulk of the card's content.</p></center><br> 
+           <center><h1>Explore Our Fares.. </h1></center>
+           <center> <p>Plan & Book ! <br>Take advantage of convenient travel services to make your journey easy and enjoyable from start to finish</p></center><br> 
            <div class="row">
                
                <div class="col-lg-4 col-md-6 col-sm-12"> 
@@ -84,7 +84,7 @@
                  <img src="../images/india.png" class="card-img-top" alt="...">
                  <div class="card-body" >
                    <h4 class="card-title">Sri Lanka To India</h4>
-                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   <p class="card-text">Air-India is proud to be one of the youngest global airlines to serve all six continents, and thanks to our customers’ response to our offerings, we are also the world’s fastest-growing airline.</p>
                  </div>
                  <h5 class="card-title" style="padding-left: 15px">Facilities</h5>
                  <table class="table" style="background-color: rgba(255,255,255,0.6);">
@@ -98,28 +98,28 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Complimentary Wi-Fi</td>
+                        <td>Gourmet dining</td>
+                        <td>Cigar bar</td>
                       </tr>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Le Clos Wine Cellar</td>
+                        <td>Quiet areas</td>
+                        <td>Complimentary Wi-Fi</td>
                       </tr>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Direct boarding</td>
+                        <td>Cigar bar</td>
+                        <td>Gaming zone</td>
                       </tr>
 
                     </tbody>
                   </table>
                  <h5 class="card-title" style="padding-left: 15px">Common Facilities</h5>
                  <ul class="list-group list-group-flush" style="padding-left: 20px;">
-                   <li class="list-group-item">An item</li>
-                   <li class="list-group-item">A second item</li>
-                   <li class="list-group-item">A third item</li>
+                   <li class="list-group-item">Adjustable seats</li>
+                   <li class="list-group-item">mouth-watering cuisine with a choice of up to three main courses</li>
+                   <li class="list-group-item">light snacks</li>
                  </ul>
                  <div class="card-body">
                    <a href="../index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
@@ -134,7 +134,7 @@
                  <img src="../images/dubai.jpg" class="card-img-top" alt="...">
                  <div class="card-body" >
                    <h4 class="card-title">Sri Lanka To Dubai</h4>
-                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   <p class="card-text">At flydubai we’re committed to removing barriers to travel and making air travel more affordable, convenient and flexible. Find out more about us and what you can expect when you choose to fly with us.</p>
                  </div>
                  <h5 class="card-title" style="padding-left: 15px">Facilities</h5>
                  <table class="table" style="background-color: rgba(255,255,255,0.6);">
@@ -148,28 +148,28 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Complimentary Wi-Fi</td>
+                        <td>Gourmet dining</td>
+                        <td>Cigar bar</td>
                       </tr>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Le Clos Wine Cellar</td>
+                        <td>Quiet areas</td>
+                        <td>Complimentary Wi-Fi</td>
                       </tr>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                         <td>Direct boarding</td>
+                        <td>Cigar bar</td>
+                        <td>Gaming zone</td>
                       </tr>
 
                     </tbody>
                   </table>
                  <h5 class="card-title" style="padding-left: 15px">Common Facilities</h5>
                  <ul class="list-group list-group-flush" style="padding-left: 20px">
-                   <li class="list-group-item">An item</li>
-                   <li class="list-group-item">A second item</li>
-                   <li class="list-group-item">A third item</li>
+                   <li class="list-group-item">Adjustable seats</li>
+                   <li class="list-group-item">mouth-watering cuisine with a choice of up to three main courses</li>
+                   <li class="list-group-item">light snacks</li>
                  </ul>
                  <div class="card-body">
                    <a href="../index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
@@ -184,7 +184,7 @@
                  <img src="../images/aus.jpg" class="card-img-top" alt="...">
                  <div class="card-body" >
                    <h4 class="card-title">Sri Lanka To Australia</h4>
-                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   <p class="card-text">Australia melbourne National Carrier is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality.<br><br></p>
                  </div>
                  <h5 class="card-title" style="padding-left: 15px">Facilities</h5>
                  <table class="table" style="background-color: rgba(255,255,255,0.6);">
@@ -198,28 +198,28 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Complimentary Wi-Fi</td>
+                        <td>Gourmet dining</td>
+                        <td>Cigar bar</td>
                       </tr>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Le Clos Wine Cellar</td>
+                        <td>Quiet areas</td>
+                        <td>Complimentary Wi-Fi</td>
                       </tr>
                       <tr>
-                        <td>An item</td>
-                        <td>A second item</td>
-                        <td>A third item</td>
+                        <td>Direct boarding</td>
+                        <td>Cigar bar</td>
+                        <td>Gaming zone</td>
                       </tr>
 
                     </tbody>
                   </table>
                  <h5 class="card-title" style="padding-left: 15px">Common Facilities</h5>
                  <ul class="list-group list-group-flush" style="padding-left: 20px">
-                   <li class="list-group-item">An item</li>
-                   <li class="list-group-item">A second item</li>
-                   <li class="list-group-item">A third item</li>
+                   <li class="list-group-item">Adjustable seats</li>
+                   <li class="list-group-item">mouth-watering cuisine with a choice of up to three main courses</li>
+                   <li class="list-group-item">light snacks</li>
                  </ul>
                  <div class="card-body">
                    <a href="../index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>

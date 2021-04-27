@@ -115,8 +115,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavAltMarkup\">\r\n");
       out.write("          <div class=\"navbar-nav\">\r\n");
       out.write("            <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>\r\n");
-      out.write("            <a class=\"nav-link\" href=\"#\">Flights</a>\r\n");
+      out.write("            <a class=\"nav-link\" href=\"./Flights/flights.jsp\">Flights</a>\r\n");
       out.write("            <a class=\"nav-link\" href=\"#\">Pricing</a>\r\n");
+      out.write("            <a class=\"nav-link\" href=\"login.jsp\">Login</a>\r\n");
       out.write("            <a class=\"nav-link\" href=\"#\">\r\n");
       out.write("                <i class=\"fas fa-user\"></i>\r\n");
       out.write("            </a>\r\n");
@@ -241,6 +242,14 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </div>\r\n");
       out.write("                  </div>\r\n");
       out.write("        </div>\r\n");
+      out.write("        <div class=\"cont\"> \r\n");
+      out.write("            \r\n");
+      out.write("            <h1 class=\"header\">Lorem Ipsum...</h1>\r\n");
+      out.write("            <h3 class=\"slog\">Lorem Ipsum is simply dummy text of the printing and typesetting</h3><br>\r\n");
+      out.write("            <p class=\"content\">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularise</p>\r\n");
+      out.write("            \r\n");
+      out.write("            \r\n");
+      out.write("        </div>\r\n");
       out.write("        \r\n");
       out.write("        <div class=\"container-fluid footer\">\r\n");
       out.write("            <div class=\"row\">\r\n");
@@ -276,7 +285,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\r\n");
       out.write("                \r\n");
       out.write("            </div>\r\n");
-      out.write("            <center><p style=\"color: white\"><i class=\"fas fa-copyright\"></i> copyright phoenix airlines 2021</p></center>\r\n");
+      out.write("            <center><p style=\"color: white\"><i class=\"fas fa-copyright\"></i> copyright phoenix airlines 2021</p></center><br>\r\n");
       out.write("        </div>\r\n");
       out.write("        \r\n");
       out.write("       \r\n");

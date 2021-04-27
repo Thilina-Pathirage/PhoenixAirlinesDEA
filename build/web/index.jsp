@@ -111,8 +111,8 @@
                         <div class="card-body">
                           <h5 class="card-title">Comfortable</h5>
                           <p class="card-text">
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.
+                            Fly in comfort with more spaces and with some other great facilities at the most sensible charges.
+                            
                           </p>
                         </div>
 
@@ -128,8 +128,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Best Customer Service</h5>
                           <p class="card-text">
-                            This card has supporting text below as a natural lead-in to additional
-                            content.
+                            Let us take care of you in all the ways. Surely you will experience the glow of our true traditional SriLankan hospitality.
                           </p>
                         </div>
 
@@ -145,9 +144,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Cost Effective</h5>
                           <p class="card-text">
-                            This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show
-                            that equal height action.
+                            We provide you the best offers with favourable discounts for your travels in the most wallet-friendly ways.
                           </p>
                         </div>
 
@@ -157,9 +154,14 @@
         </div>
         <div class="cont"> 
             
-            <h1 class="header">Lorem Ipsum...</h1>
-            <h3 class="slog">Lorem Ipsum is simply dummy text of the printing and typesetting</h3><br>
-            <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularise</p>
+            <h1 class="header">About Us...</h1>
+            <h3 class="slog">Get to know Phoenix better through our history, brands, values, people and initiatives</h3><br>
+            <p class="content">Launched in 2014, Phoenix Airlines is an award winning airline with 
+                a solid reputation for service, comfort, safety, reliability, hospitality and punctuality.<br>
+                Phoenix Airlines currently has an all-Airbus fleet of 24 modern, sophisticated aircrafts.<br>
+                Our all new A330-300s come with a range of novelties where the ease of modern air travel harmoniously blends in with the uniqueness of Sri Lanka.
+                <br><br>Find help with your bookings and travel plans, and see what to expect along your journey.<br>So, Enjoy your flight and relax in greater comfort..
+                </p>
             
             
         </div>
