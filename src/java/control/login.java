@@ -1,19 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package control;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.tickets;
 import model.unameCheck;
 import model.upCheck;
 
@@ -95,20 +96,78 @@ public class login extends HttpServlet {
        unameCheck b=new unameCheck();
         
        boolean check=b.viewdata(uname);
+       tickets tc = new tickets();
+       
           
         
          
            
            if(check==true)
            {
-                  String passw = ((String) blist.get(2));
+                  String passw = ((String) blist.get(3));
                   String namess=((String) blist.get(1));
+                  String mail = ((String) blist.get(2));
+                  String id = ((String)blist.get(0));
                   
+                  String cTime =(new java.util.Date()).toLocaleString();
+                  String ip = request.getRemoteAddr();
+              List tlist = null;
+              try {
+                  tlist = tc.getTicket(id);
+              } catch (SQLException ex) {
+                  Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
+              }
+              
+              Cookie ck = new Cookie("uname",namess);
+              response.addCookie(ck);
+             
+              HttpSession session = request.getSession();
+              session.setAttribute("user",namess);
+              HttpSession session2 = request.getSession();
+              session2.setAttribute("mail", mail);
+              HttpSession session3 = request.getSession();
+              session3.setAttribute("last", cTime);
+              HttpSession session4 = request.getSession();
+              session4.setAttribute("ip", ip);
+              HttpSession session5 = request.getSession();
+              session5.setAttribute("id", id);
+              
+              
+              
+              String tickect = ((String)tlist.get(0));
+              String flight = ((String)tlist.get(1));
+              String seat = ((String)tlist.get(2));
+              String price = ((String)tlist.get(3));
+              String date = ((String)tlist.get(4));
+              String desti = ((String)tlist.get(5));
+              String cls = ((String)tlist.get(6));
+              
+              HttpSession session6 = request.getSession();
+              session.setAttribute("ticket",tickect);
+              HttpSession session7 = request.getSession();
+              session2.setAttribute("flight", flight);
+              HttpSession session8 = request.getSession();
+              session3.setAttribute("seat", seat);
+              HttpSession session9 = request.getSession();
+              session4.setAttribute("price", price);
+              HttpSession session10 = request.getSession();
+              session5.setAttribute("date",date);
+              HttpSession session11 = request.getSession();
+              session5.setAttribute("desti", desti);
+              HttpSession session12 = request.getSession();
+              session5.setAttribute("cls", cls);
+             
+             
+              
+              
+                   
+                  
+              if(uname.endsWith("0")){    
       
                 if(pass.equals(passw))
                 {
                       //staff A,B / admin
-                       response.sendRedirect("./index.jsp");
+                       response.sendRedirect("./Admin/admin.jsp");
                        out.println("Login Sucsess !!!");
                 }
                 
@@ -119,7 +178,58 @@ public class login extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
                 rd.forward(request, response);
                 }
-               
+              }
+              else if(uname.endsWith("1"))
+              {
+                 if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Staff/staff.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                } 
+              }
+              else if (uname.endsWith("2"))
+              {
+                 if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Staff/staff2.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                }  
+              }
+              else
+              {
+                  if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Profile/profile.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                } 
+              }
  
                
                

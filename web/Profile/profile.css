@@ -8,3 +8,10 @@ and open the template in the editor.
     Author     : User
 */
 
+.prof{
+    height: auto;
+    background: linear-gradient(to bottom ,rgba(255, 255, 255, 0.700)30%,rgba(255, 255, 255, 0.400)100%), url('../images/parallax-img.png');
+    background-size: cover;
+    padding: 50px 50px 100px 50px ;
+    background-attachment: fixed;
+}

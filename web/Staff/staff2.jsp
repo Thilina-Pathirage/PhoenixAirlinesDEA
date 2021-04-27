@@ -57,7 +57,7 @@ ResultSet resultSet = null;
                   data-mdb-toggle="collapse"
                   data-mdb-target="#navbarNavAltMarkup"
                   aria-controls="navbarNavAltMarkup"
-                  aria-expanded="false"
+                  
                   aria-label="Toggle navigation"
                 >
                   <i class="fas fa-bars"></i>

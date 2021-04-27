@@ -7,6 +7,7 @@ package model;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -69,5 +70,21 @@ public class tickets {
         return state == 1;
     }
 
-    
+    public List getTicket(String userid) throws SQLException {
+        List tList = new ArrayList();
+        statement = con.connection().createStatement();
+        String sql = "SELECT * FROM tiskets WHERE clientid LIKE '" + userid + "'"; 
+        resultSet = statement.executeQuery(sql);
+        
+        while(resultSet.next()){
+            tList.add(resultSet.getString("ticketid"));
+            tList.add(resultSet.getString("flightid"));
+            tList.add(resultSet.getString("seatno"));
+            tList.add(resultSet.getString("price"));
+            tList.add(resultSet.getString("date"));
+            tList.add(resultSet.getString("destination"));
+            tList.add(resultSet.getString("class"));
+        }
+        return tList;
+    }
 }
