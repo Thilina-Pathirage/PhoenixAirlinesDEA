@@ -155,6 +155,14 @@
                     </div>
                   </div>
         </div>
+        <div class="cont"> 
+            
+            <h1 class="header">Lorem Ipsum...</h1>
+            <h3 class="slog">Lorem Ipsum is simply dummy text of the printing and typesetting</h3><br>
+            <p class="content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularise</p>
+            
+            
+        </div>
         
         <div class="container-fluid footer">
             <div class="row">
@@ -190,7 +198,7 @@
                 </div>
                 
             </div>
-            <center><p style="color: white"><i class="fas fa-copyright"></i> copyright phoenix airlines 2021</p></center>
+            <center><p style="color: white"><i class="fas fa-copyright"></i> copyright phoenix airlines 2021</p></center><br>
         </div>
         
        
