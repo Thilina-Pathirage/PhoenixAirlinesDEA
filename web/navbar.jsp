@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Flights</a>
+            <a class="nav-link" href="./Flights/flights.jsp">Flights</a>
             <a class="nav-link" href="#">Pricing</a>
             <a class="nav-link" href="login.jsp">Login</a>
             <a class="nav-link" href="#">
