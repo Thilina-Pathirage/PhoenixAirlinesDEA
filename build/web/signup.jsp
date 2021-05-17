@@ -84,18 +84,17 @@ h2{
           data-mdb-toggle="collapse"
           data-mdb-target="#navbarNavAltMarkup"
           aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="./index.jsp">Home</a>
+            <a class="nav-link active"  href="./index.jsp">Home</a>
             <a class="nav-link" href="#">Flights</a>
             <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="login.jsp">Login</a>
           
-            </a>
           </div>
         </div>
   </div>

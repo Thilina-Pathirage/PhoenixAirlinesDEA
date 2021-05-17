@@ -37,18 +37,7 @@ public class login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet login</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet login at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -83,12 +72,9 @@ public class login extends HttpServlet {
         String uname=request.getParameter("uname");
         String pass=request.getParameter("password");
         
+    
         
-        out.println(uname);
-        out.print(pass);
-        
-        
-            upCheck d=new upCheck();
+          upCheck d=new upCheck();
     
           List blist=d.viewdata(uname);
           
@@ -111,12 +97,24 @@ public class login extends HttpServlet {
                   
                   String cTime =(new java.util.Date()).toLocaleString();
                   String ip = request.getRemoteAddr();
+              
+             
               List tlist = null;
               try {
+                   if (tc.checkTicket(id))
+              {
                   tlist = tc.getTicket(id);
+                  
+              }
+                   else
+                   {
+                       tlist = null;
+                   }
               } catch (SQLException ex) {
                   Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
               }
+              
+            
               
               Cookie ck = new Cookie("uname",namess);
               response.addCookie(ck);
@@ -133,6 +131,82 @@ public class login extends HttpServlet {
               session5.setAttribute("id", id);
               
               
+          if(tlist==null)
+          {
+            if(uname.endsWith("0")){    
+      
+                if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Admin/admin.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                }
+              }
+              else if(uname.endsWith("1"))
+              {
+                 if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Staff/staff.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                } 
+              }
+              else if (uname.endsWith("2"))
+              {
+                 if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Staff/staff2.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                }  
+              }
+              else
+              {
+                  if(pass.equals(passw))
+                {
+                      //staff A,B / admin
+                       response.sendRedirect("./Profile/profile.jsp");
+                       out.println("Login Sucsess !!!");
+                }
+                
+                else{
+                    String msgfour="User name or Password Incorrect";
+                  
+                request.setAttribute("messagefour",msgfour);
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request, response);
+                } 
+              }
+  
+           }
+           
+          
+          else
+          {
               
               String tickect = ((String)tlist.get(0));
               String flight = ((String)tlist.get(1));
@@ -142,24 +216,25 @@ public class login extends HttpServlet {
               String desti = ((String)tlist.get(5));
               String cls = ((String)tlist.get(6));
               
-              HttpSession session6 = request.getSession();
-              session.setAttribute("ticket",tickect);
-              HttpSession session7 = request.getSession();
-              session2.setAttribute("flight", flight);
-              HttpSession session8 = request.getSession();
-              session3.setAttribute("seat", seat);
-              HttpSession session9 = request.getSession();
-              session4.setAttribute("price", price);
-              HttpSession session10 = request.getSession();
-              session5.setAttribute("date",date);
-              HttpSession session11 = request.getSession();
-              session5.setAttribute("desti", desti);
-              HttpSession session12 = request.getSession();
-              session5.setAttribute("cls", cls);
+              //HttpSession session6 = request.getSession();
+              //session.setAttribute("ticket",tickect);
+              request.setAttribute("ticket",tickect);
+              //HttpSession session7 = request.getSession();
+              request.setAttribute("flight", flight);
+              //HttpSession session8 = request.getSession();
+              request.setAttribute("seat", seat);
+              //HttpSession session9 = request.getSession();
+              request.setAttribute("price", price);
+              //HttpSession session10 = request.getSession();
+              request.setAttribute("date",date);
+              //HttpSession session11 = request.getSession();
+              request.setAttribute("desti", desti);
+              //HttpSession session12 = request.getSession();
+              request.setAttribute("cls", cls);
              
              
-              
-              
+          
+         
                    
                   
               if(uname.endsWith("0")){    
@@ -235,6 +310,7 @@ public class login extends HttpServlet {
                
                 
               
+           }
            }
            else{
                

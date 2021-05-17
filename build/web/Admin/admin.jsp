@@ -57,20 +57,38 @@ ResultSet resultSet = null;
                   data-mdb-toggle="collapse"
                   data-mdb-target="#navbarNavAltMarkup"
                   aria-controls="navbarNavAltMarkup"
-                  aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
                   <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Flights</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="login.jsp">Login</a>
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-user"></i>
-                    </a>
+                    <a class="nav-link " href="../index.jsp">Home</a>
+                    <a class="nav-link" href="../Flights/flights.jsp">Flights</a>
+                    <a class="nav-link " href="../price.jsp">Pricing</a>
+            <% 
+        String uname= (String)session.getAttribute("user");
+        if(uname==null){%>
+            <a class="nav-link" href="login.jsp">Login</a> <% }else{
+            if(uname.endsWith("0")){%>
+            <a class="nav-link" href="../Admin/admin.jsp">
+             
+            </a>
+            <% }else if(uname.endsWith("1")){%>
+            <a class="nav-link" href="../Staff/staff.jsp">
+            Dashboard
+            </a>
+            <% }else if(uname.endsWith("2")){%>
+            <a class="nav-link" href="../Staff/staff2.jsp">
+            
+            </a>
+            <% }else{%>
+            <a class="nav-link" href="../Profile/profile.jsp">
+            <i class="fas fa-user"></i>
+            </a>
+            <% }}%>
+            <form action="../logout" method="POST">
+                <input type="submit" value="Log Out" style="color:black;border-radius:20px;background-color: white;margin: 5px 5px 0px 5px"></form> 
                   </div>
                 </div>
           </div>
@@ -398,7 +416,7 @@ ResultSet resultSet = null;
                 </div>
                 
             </div>
-            <center><p style="color: white"><i class="fas fa-copyright"></i> copyright phoenix airlines 2021</p></center>
+             <center><p style="color: white"><i class="fas fa-copyright"></i> copyright phoenix airlines 2021</p></center><br>
         </div>
         
         

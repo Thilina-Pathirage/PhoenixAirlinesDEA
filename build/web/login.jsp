@@ -90,8 +90,8 @@ h2{
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-link active"  href="./index.jsp">Home</a>
-                    <a class="nav-link" href="#">Flights</a>
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="./Flights/flights.jsp">Flights</a>
+                    <a class="nav-link" href="./price.jsp">Pricing</a>
                       <a class="nav-link" href="./signup.jsp">Sign Up</a>
                     
                    
@@ -115,87 +115,54 @@ h2{
       <div class="col-sm-9 col-lg-4 col-md-7">
           
         <div class="loginfrm">
-            <% 
+        <% 
         String uname= (String)session.getAttribute("user");
-        if(uname==null){%>
-        <p style="color:red;"> Please Log in for To do the rest</p>
-              <%  }%>
-            <form action="./login" method="POST">
+        if(uname==null){
+        %>
+        <p style="color:rgba(0, 153, 255,1);"> Please Log In To Continue</p>
+        <%  }%>
+        <form action="./login" method="POST">
         <br>
         <h2>Sign In</h2><br>
         
         <%
-               String rs=(String)request.getAttribute("messagethree");
+           String rs=(String)request.getAttribute("messagethree");
            if(rs==null)
            {
                     rs="";
            }
            
-         String rk=(String)request.getAttribute("messagefour");
+           String rk=(String)request.getAttribute("messagefour");
            if(rk==null)
            {
                     rk="";
            }
+        %>
+            
        
-            
-            
-            
-            %>
-            
-            
-        
-        
-               
-                    <div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
-  <input type="text" class="form-control"  placeholder="username" aria-label="Username" name="uname"
-         aria-describedby="addon-wrapping" />
-  
-  
-          
-       
-</div>
-        
-    
-       
-                          
-                           
-        
-        
-        
-                    <br>
+   <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user"></i></span>
+        <input type="text" class="form-control"  placeholder="username" aria-label="Username" name="uname"
+               aria-describedby="addon-wrapping" required />      
+   </div><br>
                     
-                              <div class="input-group flex-nowrap">
-  <span class="input-group-text" id="addon-wrapping"><i class="fas fa-unlock-alt"></i></span>
-  <input type="password" class="form-control" placeholder="password" aria-label="Username"
-    aria-describedby="addon-wrapping" name="password" />
-     
-</div>
-                     <p style="color: red;"> <%=rk%></p>
-                           <p style="color: red;"> <%=rs%></p>   
-   
-
-                            <br>
-                          <span>Haven’t created an account yet?</span><a href="./signup.jsp">sign up</a>  
-  
-                          <br><br>
+   <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-unlock-alt"></i></span>
+        <input type="password" class="form-control" placeholder="password" aria-label="Username"
+          aria-describedby="addon-wrapping" name="password" required />
+   </div>
+                     
+   <p style="color: red;"> <%=rk%></p>
+   <p style="color: red;"> <%=rs%></p>   
+   <br>
+   <span>Haven’t created an account yet?</span><a href="./signup.jsp">sign up</a>  
+   <br><br>
 
   <!-- Submit button -->
-  <button type="submit" class="btn btn-dark btn-block mb-4">Sign in</button>
-
-
-</form>
-            
-            
-        </div>
-                     </center>
-                        <br> <br> <br> <br> <br> <br>
+   <button type="submit" class="btn btn-dark btn-block mb-4">Sign in</button>
+    </form>
     </div>
-                   
-     
-        
-  
-            
-    
-    </body>
+    </center><br> <br> <br> <br> <br> <br>
+ </div> 
+ </body>
 </html>

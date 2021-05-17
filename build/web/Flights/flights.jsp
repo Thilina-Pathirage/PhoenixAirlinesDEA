@@ -64,48 +64,36 @@
           <div class="navbar-nav">
             <a class="nav-link "  href="../index.jsp">Home</a>
             <a class="nav-link active" href="#">Flights</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <image src="../images/Logo.png" class="nav-logo"/>
-            <span class="nav-name"> Phoenix Airlines </span>
-        </a> 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link "  href="../index.jsp">Home</a>
-            <a class="nav-link active" href="#">Flights</a>
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="../price.jsp">Pricing</a>
             <% 
         String uname= (String)session.getAttribute("user");
-        if(uname==null){%>
-            <a class="nav-link" href="../login.jsp">Login</a> <% }else{%>
-            <a class="nav-link" href="../Profile/profile.jsp">
-                <i class="fas fa-user"></i>
+if(uname==null){%>
+            <a class="nav-link" href="login.jsp">Login</a> <% }else{
+            if(uname.endsWith("0")){%>
+            <a class="nav-link" href="../Admin/admin.jsp">
+             Dashboard
             </a>
-            <% }%>
+            <% }else if(uname.endsWith("1")){%>
+            <a class="nav-link" href="../Staff/staff.jsp">
+            Dashboard
+            </a>
+            <% }else if(uname.endsWith("2")){%>
+            <a class="nav-link" href="../Staff/staff2.jsp">
+            <i class="fas fa-user"></i>
+            </a>
+            <% }else{%>
+            <a class="nav-link" href="../Profile/profile.jsp">
+            <i class="fas fa-user"></i>
+            </a>
+            <% }}%>
           </div>
         </div>
   </div>
 </nav>
-          </div>
-        </div>
-  </div>
-</nav>
+         
 
        <div class="flight">
-           <center><h1>Explore Our Fares.. </h1></center>
+           <center><h1 style="font-size: 70px;color: black">Explore Our Fares.. </h1></center>
            <center> <p>Plan & Book ! <br>Take advantage of convenient travel services to make your journey easy and enjoyable from start to finish</p></center><br> 
            <div class="row">
                
