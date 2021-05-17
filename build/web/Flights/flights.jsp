@@ -68,7 +68,7 @@
             <% 
         String uname= (String)session.getAttribute("user");
 if(uname==null){%>
-            <a class="nav-link" href="login.jsp">Login</a> <% }else{
+            <a class="nav-link" href="../login.jsp">Login</a> <% }else{
             if(uname.endsWith("0")){%>
             <a class="nav-link" href="../Admin/admin.jsp">
              Dashboard
