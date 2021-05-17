@@ -113,11 +113,29 @@ h1{
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link "  href="./index.jsp">Home</a>
-            <a class="nav-link active" href="#">Flights</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link" href="#">
-                <i class="fas fa-user"></i>
+            <a class="nav-link " href="./Flights/flights.jsp">Flights</a>
+            <a class="nav-link active" href="#">Pricing</a>
+            <% 
+        String uname= (String)session.getAttribute("user");
+        if(uname==null){%>
+            <a class="nav-link" href="login.jsp">Login</a> <% }else{
+            if(uname.endsWith("0")){%>
+            <a class="nav-link" href="./Admin/admin.jsp">
+             Dashboard
             </a>
+            <% }else if(uname.endsWith("1")){%>
+            <a class="nav-link" href="./Staff/staff.jsp">
+            Dashboard
+            </a>
+            <% }else if(uname.endsWith("2")){%>
+            <a class="nav-link" href="./Staff/staff2.jsp">
+            <i class="fas fa-user"></i>
+            </a>
+            <% }else{%>
+            <a class="nav-link" href="./Profile/profile.jsp">
+            <i class="fas fa-user"></i>
+            </a>
+            <% }}%>
           </div>
         </div>
   </div>

@@ -4,6 +4,10 @@
     Author     : User
 --%>
 
+<%@page import="model.dbcon"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 <%@page import="java.util.List"%>
 <%@page import="model.tickets"%>
 <% 
@@ -11,6 +15,11 @@
         String uname= (String)session.getAttribute("user");
         if(uname!=null){%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -73,9 +82,7 @@
             <a class="nav-link" href="#">Pricing</a>
             <form action="../logout" method="POST">
                 <input type="submit" value="Log Out" style="color:black;border-radius:20px;background-color: white;margin: 5px 5px 0px 5px"></form> 
-            <a class="nav-link" href="#">
-                <i class="fas fa-user"></i>
-            </a>
+            
             
           </div>
         </div>
@@ -86,23 +93,26 @@ String name= (String)session.getAttribute("user");
 String mail= (String)session.getAttribute("mail");
 String last= (String)session.getAttribute("last");
 String ip= (String)session.getAttribute("ip");
+String id = (String)session.getAttribute("id");
 
-String tickect =(String) session.getAttribute("ticket");
-              String flight = (String) session.getAttribute("flight");
-              String seat = (String) session.getAttribute("seat");
-              String price = (String) session.getAttribute("price");
-              String date = (String) session.getAttribute("date");
-              String desti = (String) session.getAttribute("desti");
-              String cls = (String) session.getAttribute("cls");
+              /*String tickect =(String) request.getAttribute("ticket");
+              String flight =(String) request.getAttribute("flight");
+              String seat = (String) request.getAttribute("seat");
+              String price = (String) request.getAttribute("price");
+              String date = (String) request.getAttribute("date");
+              String desti = (String) request.getAttribute("desti");
+              String cls = (String) request.getAttribute("cls");*/
 
 
 %>
        <div class="prof">
-           <center><h1>Welcome <%= name%> ... </h1>
-           <h5>Profile details</h5></center>
+           <center>
+               <h1>Welcome <%= name%> ... </h1><br>
+           <h5><b>Profile Details</b></h5>
+           </center>
            <br> 
-           <div class="row"><center>
-               <div class="col-lg-6 col-sm-12">
+           <div class="row">
+               <center><div class="col-lg-6 col-sm-12">
                    <table class="table " style="text-align:center;">
                        <thead>
                         <tr>
@@ -135,41 +145,66 @@ String tickect =(String) session.getAttribute("ticket");
                           
                         </tr>
                       
-                   </table>
-                          <br>
-                   <h5>Profile details</h5></center>
-           <br> 
-                   <table class="table " style="text-align:center;">
-                       <thead>
-                        <tr>
-                          
-                          <th scope="col">User Name</th>
-                          <th scope="col">Flight</th>
-                          <th scope="col">Seats</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Date</th>
-                          <th scope="col">Destination</th>
-                          <th scope="col">Class</th>
-                          
-                        </tr>
-                      </thead>
-                      <tr>
-                          <td><%= name %></td>
-                          <td><%= flight %></td>
-                          <td><%= seat %></td>
-                          <td><%= price %></td>
-                          <td><%= date %></td>
-                          <td><%= desti %></td>
-                          <td><%= cls %></td>
-                      </tr>
-                      
-                   </table>
+                   </table></div><br>
+                   <br>
+                   <h5><b>Reservation Details</b></h5><br>
+            <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>TiketID</th>
+                    <th>FlightID</th>
+                    <th>ClientID</th>
+                    <th>Seat Numbers</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Destination</th>
+                    <th>Class</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            
+            <%
+            try{
+            dbcon con = new dbcon();
+            statement =con.connection().createStatement();
+            String sql2 = "SELECT * FROM tiskets  WHERE clientid LIKE '" + id + "'";
+            resultSet = statement.executeQuery(sql2);
+
+            while(resultSet.next()){%>
+
+            <tbody>
+                <tr>
+                    <td><%=resultSet.getString("ticketid")%></td>
+                    <td><%=resultSet.getString("flightid")%></td>
+                    <td><%=resultSet.getString("clientid")%></td>
+                    <td><%=resultSet.getString("seatno")%></td>
+                    <td><%=resultSet.getString("price")%></td>
+                    <td><%=resultSet.getString("date")%></td>
+                    <td><%=resultSet.getString("destination")%></td>
+                    <td><%=resultSet.getString("class")%></td>
+                    <td>
+                        <form action="../deleteTicket" method="POST">
+                            <input type="hidden" name="tiketid" value="<%=resultSet.getString("ticketid")%>">
+                            <input type="submit" value="Delete" class="btn btn-dark"/>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+            
+            <%
+                }
+            connection.close();
+            }catch(Exception e){
+                e.printStackTrace();
+            }      
+            %>
+        </table>
                    
-               </div>
                
+              </center>
            </div>
       
-               
+       </div>         
        
 
 <div class="container-fluid footer" >

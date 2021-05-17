@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -86,5 +88,28 @@ public class tickets {
             tList.add(resultSet.getString("class"));
         }
         return tList;
+    }
+    
+    public boolean checkTicket(String userid) throws SQLException {
+        statement = con.connection().createStatement();
+        String query="SELECT * FROM tiskets WHERE clientid LIKE '" + userid + "'";
+         boolean flag=false;
+            try {
+                ResultSet rs = statement.executeQuery(query);
+                
+              if(rs.next())
+              {
+                  flag=true;
+              }
+             
+            
+                
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(unameCheck.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
+        return flag;
+      
     }
 }

@@ -42,7 +42,8 @@
         <%@ include file="./navbar.jsp"%>
         
         <div class="parallax-home" >
-            <h2 class="main-title" >PHOENIX AIRLINES </h2>
+            <h2 class="main-title" >PHOENIX AIRLINES <br><span style="font-size: 25px;">Find islands' best offers with SriLankan Holidays</span></h2>
+            
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6 col-sm-12 form1">
                     <form action="./SearchFlight" method="POST">
@@ -157,10 +158,10 @@
             <h1 class="header">About Us...</h1>
             <h3 class="slog">Get to know Phoenix better through our history, brands, values, people and initiatives</h3><br>
             <p class="content">Launched in 2014, Phoenix Airlines is an award winning airline with 
-                a solid reputation for service, comfort, safety, reliability, hospitality and punctuality.<br>
-                Phoenix Airlines currently has an all-Airbus fleet of 24 modern, sophisticated aircrafts.<br>
+                a solid reputation for service, comfort, safety, reliability, hospitality and punctuality.
+                Phoenix Airlines currently has an all-Airbus fleet of 24 modern, sophisticated aircrafts.
                 Our all new A330-300s come with a range of novelties where the ease of modern air travel harmoniously blends in with the uniqueness of Sri Lanka.
-                <br><br>Find help with your bookings and travel plans, and see what to expect along your journey.<br>So, Enjoy your flight and relax in greater comfort..
+                Find help with your bookings and travel plans, and see what to expect along your journey.<br>So, Enjoy your flight and relax in greater comfort..
                 </p>
             
             
@@ -173,6 +174,7 @@
                    <h6>Phoenix Airlines</h6>
                    <p>Find islands' best offers with SriLankan Holidays</p>
                 </div>
+                
                 <div class="col-lg-4 col-sm-12"><br>
                     <form>
 
