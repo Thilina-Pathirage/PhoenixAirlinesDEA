@@ -79,7 +79,7 @@ ResultSet resultSet = null;
           <div class="navbar-nav">
             <a class="nav-link " href="../index.jsp">Home</a>
             <a class="nav-link active" href="#">Flights</a>
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" href="../price.jsp">Pricing</a>
             <form action="../logout" method="POST">
                 <input type="submit" value="Log Out" style="color:black;border-radius:20px;background-color: white;margin: 5px 5px 0px 5px"></form> 
             

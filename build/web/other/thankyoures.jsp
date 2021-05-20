@@ -37,7 +37,7 @@
             
             <h1 >Reservation Successful..! Thank You..!</h1>
         
-            <a class="btn btn-primary" href="#"> See Your Reservations</a> 
+            <a class="btn btn-primary" href="./Profile/profile.jsp"> See Your Reservations</a> 
             <a class="btn btn-warning" href="http://localhost:8080/PhoenixAirlinesDEA/"> Back to Home</a>
         </div>
     </body>

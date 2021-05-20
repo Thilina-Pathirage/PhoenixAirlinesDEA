@@ -3,6 +3,10 @@ package org.apache.jsp.Profile;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import model.dbcon;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.sql.Connection;
 import java.util.List;
 import model.tickets;
 
@@ -47,11 +51,21 @@ public final class profile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
  
     
         String uname= (String)session.getAttribute("user");
         if(uname!=null){
       out.write("\r\n");
+      out.write("\r\n");
+
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+
       out.write("\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
@@ -115,9 +129,7 @@ public final class profile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a class=\"nav-link\" href=\"#\">Pricing</a>\r\n");
       out.write("            <form action=\"../logout\" method=\"POST\">\r\n");
       out.write("                <input type=\"submit\" value=\"Log Out\" style=\"color:black;border-radius:20px;background-color: white;margin: 5px 5px 0px 5px\"></form> \r\n");
-      out.write("            <a class=\"nav-link\" href=\"#\">\r\n");
-      out.write("                <i class=\"fas fa-user\"></i>\r\n");
-      out.write("            </a>\r\n");
+      out.write("            \r\n");
       out.write("            \r\n");
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
@@ -128,26 +140,29 @@ String name= (String)session.getAttribute("user");
 String mail= (String)session.getAttribute("mail");
 String last= (String)session.getAttribute("last");
 String ip= (String)session.getAttribute("ip");
+String id = (String)session.getAttribute("id");
 
-              String tickect =(String) request.getAttribute("ticket");
+              /*String tickect =(String) request.getAttribute("ticket");
               String flight =(String) request.getAttribute("flight");
               String seat = (String) request.getAttribute("seat");
               String price = (String) request.getAttribute("price");
               String date = (String) request.getAttribute("date");
               String desti = (String) request.getAttribute("desti");
-              String cls = (String) request.getAttribute("cls");
+              String cls = (String) request.getAttribute("cls");*/
 
 
 
       out.write("\r\n");
       out.write("       <div class=\"prof\">\r\n");
-      out.write("           <center><h1>Welcome ");
+      out.write("           <center>\r\n");
+      out.write("               <h1>Welcome ");
       out.print( name);
-      out.write(" ... </h1>\r\n");
-      out.write("           <h5>Profile details</h5></center>\r\n");
+      out.write(" ... </h1><br>\r\n");
+      out.write("           <h5><b>Profile Details</b></h5>\r\n");
+      out.write("           </center>\r\n");
       out.write("           <br> \r\n");
-      out.write("           <div class=\"row\"><center>\r\n");
-      out.write("               <div class=\"col-lg-6 col-sm-12\">\r\n");
+      out.write("           <div class=\"row\">\r\n");
+      out.write("               <center><div class=\"col-lg-6 col-sm-12\">\r\n");
       out.write("                   <table class=\"table \" style=\"text-align:center;\">\r\n");
       out.write("                       <thead>\r\n");
       out.write("                        <tr>\r\n");
@@ -188,55 +203,88 @@ String ip= (String)session.getAttribute("ip");
       out.write("                          \r\n");
       out.write("                        </tr>\r\n");
       out.write("                      \r\n");
-      out.write("                   </table>\r\n");
-      out.write("                          <br>\r\n");
-      out.write("                   <h5>Profile details</h5></center>\r\n");
-      out.write("           <br> \r\n");
-      out.write("                   <table class=\"table \" style=\"text-align:center;\">\r\n");
-      out.write("                       <thead>\r\n");
-      out.write("                        <tr>\r\n");
-      out.write("                          \r\n");
-      out.write("                          <th scope=\"col\">User Name</th>\r\n");
-      out.write("                          <th scope=\"col\">Flight</th>\r\n");
-      out.write("                          <th scope=\"col\">Seats</th>\r\n");
-      out.write("                          <th scope=\"col\">Price</th>\r\n");
-      out.write("                          <th scope=\"col\">Date</th>\r\n");
-      out.write("                          <th scope=\"col\">Destination</th>\r\n");
-      out.write("                          <th scope=\"col\">Class</th>\r\n");
-      out.write("                          \r\n");
-      out.write("                        </tr>\r\n");
-      out.write("                      </thead>\r\n");
-      out.write("                      <tr>\r\n");
-      out.write("                          <td>");
-      out.print( name );
+      out.write("                   </table></div><br>\r\n");
+      out.write("                   <br>\r\n");
+      out.write("                   <h5><b>Reservation Details</b></h5><br>\r\n");
+      out.write("            <table class=\"table\">\r\n");
+      out.write("            <thead class=\"table-dark\">\r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <th>TiketID</th>\r\n");
+      out.write("                    <th>FlightID</th>\r\n");
+      out.write("                    <th>ClientID</th>\r\n");
+      out.write("                    <th>Seat Numbers</th>\r\n");
+      out.write("                    <th>Price</th>\r\n");
+      out.write("                    <th>Date</th>\r\n");
+      out.write("                    <th>Destination</th>\r\n");
+      out.write("                    <th>Class</th>\r\n");
+      out.write("                    <th>Delete</th>\r\n");
+      out.write("                </tr>\r\n");
+      out.write("            </thead>\r\n");
+      out.write("            \r\n");
+      out.write("            ");
+
+            try{
+            dbcon con = new dbcon();
+            statement =con.connection().createStatement();
+            String sql2 = "SELECT * FROM tiskets  WHERE clientid LIKE '" + id + "'";
+            resultSet = statement.executeQuery(sql2);
+
+            while(resultSet.next()){
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("            <tbody>\r\n");
+      out.write("                <tr>\r\n");
+      out.write("                    <td>");
+      out.print(resultSet.getString("ticketid"));
       out.write("</td>\r\n");
-      out.write("                          <td>");
-      out.print( flight );
+      out.write("                    <td>");
+      out.print(resultSet.getString("flightid"));
       out.write("</td>\r\n");
-      out.write("                          <td>");
-      out.print( seat );
+      out.write("                    <td>");
+      out.print(resultSet.getString("clientid"));
       out.write("</td>\r\n");
-      out.write("                          <td>");
-      out.print( price );
+      out.write("                    <td>");
+      out.print(resultSet.getString("seatno"));
       out.write("</td>\r\n");
-      out.write("                          <td>");
-      out.print( date );
+      out.write("                    <td>");
+      out.print(resultSet.getString("price"));
       out.write("</td>\r\n");
-      out.write("                          <td>");
-      out.print( desti );
+      out.write("                    <td>");
+      out.print(resultSet.getString("date"));
       out.write("</td>\r\n");
-      out.write("                          <td>");
-      out.print( cls );
+      out.write("                    <td>");
+      out.print(resultSet.getString("destination"));
       out.write("</td>\r\n");
-      out.write("                      </tr>\r\n");
-      out.write("                      \r\n");
-      out.write("                   </table>\r\n");
+      out.write("                    <td>");
+      out.print(resultSet.getString("class"));
+      out.write("</td>\r\n");
+      out.write("                    <td>\r\n");
+      out.write("                        <form action=\"../deleteTicket\" method=\"POST\">\r\n");
+      out.write("                            <input type=\"hidden\" name=\"tiketid\" value=\"");
+      out.print(resultSet.getString("ticketid"));
+      out.write("\">\r\n");
+      out.write("                            <input type=\"submit\" value=\"Delete\" class=\"btn btn-dark\"/>\r\n");
+      out.write("                        </form>\r\n");
+      out.write("                    </td>\r\n");
+      out.write("                </tr>\r\n");
+      out.write("            </tbody>\r\n");
+      out.write("            \r\n");
+      out.write("            ");
+
+                }
+            connection.close();
+            }catch(Exception e){
+                e.printStackTrace();
+            }      
+            
+      out.write("\r\n");
+      out.write("        </table>\r\n");
       out.write("                   \r\n");
-      out.write("               </div>\r\n");
       out.write("               \r\n");
+      out.write("              </center>\r\n");
       out.write("           </div>\r\n");
       out.write("      \r\n");
-      out.write("               \r\n");
+      out.write("       </div>         \r\n");
       out.write("       \r\n");
       out.write("\r\n");
       out.write("<div class=\"container-fluid footer\" >\r\n");
