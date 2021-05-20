@@ -38,14 +38,14 @@
         
     
      <style>
-    .nav-logo{
+ .nav-logo{
     width: 25px;
     margin-left: 5px;}
     
     
 .loginfrm{
   
-     padding: 20px;
+    padding: 20px;
     margin: 20px;
     border-radius: 14px;
    

@@ -37,5 +37,20 @@ public class user {
         
         
     }
+
+    public boolean updateUser(String namess, String cTime, String ip) {
+        
+        try{
+            PreparedStatement ps = con.connection().prepareStatement("UPDATE clients SET lastlogin =?, ipaddress =? WHERE uname =?");
+            ps.setString(1, cTime);
+            ps.setString(2, ip);
+            ps.setString(3, namess);
+            
+            state = ps.executeUpdate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return state == 1;
+    }
     
 }

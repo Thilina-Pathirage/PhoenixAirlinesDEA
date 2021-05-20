@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import model.tickets;
 import model.unameCheck;
 import model.upCheck;
+import model.user;
 
 /**
  *
@@ -138,6 +139,8 @@ public class login extends HttpServlet {
                 if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                    user  u = new user();
+                    u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Admin/admin.jsp");
                        out.println("Login Sucsess !!!");
                 }
@@ -155,10 +158,11 @@ public class login extends HttpServlet {
                  if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                    user  u = new user();
+                    u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Staff/staff.jsp");
                        out.println("Login Sucsess !!!");
                 }
-                
                 else{
                     String msgfour="User name or Password Incorrect";
                   
@@ -170,18 +174,19 @@ public class login extends HttpServlet {
               else if (uname.endsWith("2"))
               {
                  if(pass.equals(passw))
-                {
-                      //staff A,B / admin
-                       response.sendRedirect("./Staff/staff2.jsp");
-                       out.println("Login Sucsess !!!");
+                {       
+                        
+                    user  u = new user();
+                    u.updateUser(namess, cTime, ip);
+                    response.sendRedirect("./Staff/staff2.jsp");
+                    out.println("Login Sucsess !!!");
                 }
                 
                 else{
                     String msgfour="User name or Password Incorrect";
-                  
-                request.setAttribute("messagefour",msgfour);
-                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                rd.forward(request, response);
+                    request.setAttribute("messagefour",msgfour);
+                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                    rd.forward(request, response);
                 }  
               }
               else
@@ -189,6 +194,8 @@ public class login extends HttpServlet {
                   if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                        user  u = new user();
+                        u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Profile/profile.jsp");
                        out.println("Login Sucsess !!!");
                 }
@@ -242,6 +249,8 @@ public class login extends HttpServlet {
                 if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                        user  u = new user();
+                    u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Admin/admin.jsp");
                        out.println("Login Sucsess !!!");
                 }
@@ -259,6 +268,8 @@ public class login extends HttpServlet {
                  if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                    user  u = new user();
+                    u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Staff/staff.jsp");
                        out.println("Login Sucsess !!!");
                 }
@@ -276,6 +287,8 @@ public class login extends HttpServlet {
                  if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                    user  u = new user();
+                    u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Staff/staff2.jsp");
                        out.println("Login Sucsess !!!");
                 }
@@ -293,6 +306,8 @@ public class login extends HttpServlet {
                   if(pass.equals(passw))
                 {
                       //staff A,B / admin
+                        user  u = new user();
+                    u.updateUser(namess, cTime, ip);
                        response.sendRedirect("./Profile/profile.jsp");
                        out.println("Login Sucsess !!!");
                 }

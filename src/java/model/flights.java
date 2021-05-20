@@ -55,7 +55,6 @@ public class flights {
         }catch(Exception e){
             e.printStackTrace();
         }
-        
         return state == 1;
     }
 

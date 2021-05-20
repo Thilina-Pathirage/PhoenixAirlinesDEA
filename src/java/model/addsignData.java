@@ -25,7 +25,7 @@ public class addsignData {
     public void addData(String uname, String email, String password) {
       
         
-             ConnectDB();
+        ConnectDB();
         String query=" INSERT INTO clients(uname,email,password) VALUES ('"+uname+"','"+email+"','"+password+"')" ; 
         
             try {
