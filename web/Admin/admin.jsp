@@ -10,11 +10,20 @@
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <%
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
+    String uname = (String)session.getAttribute("user");
+    
+    if(uname.endsWith("0")){
+        
+    }else{
+        response.sendRedirect("http://localhost:8080/PhoenixAirlinesDEA/");
+    }
+%>
+
+<% 
+    Connection connection = null;
+    Statement statement = null;
+    ResultSet resultSet = null;
 %>
 
 <html>
@@ -67,7 +76,7 @@ ResultSet resultSet = null;
                     <a class="nav-link" href="../Flights/flights.jsp">Flights</a>
                     <a class="nav-link " href="../price.jsp">Pricing</a>
             <% 
-        String uname= (String)session.getAttribute("user");
+        //String uname= (String)session.getAttribute("user");
         if(uname==null){%>
             <a class="nav-link" href="login.jsp">Login</a> <% }else{
             if(uname.endsWith("0")){%>

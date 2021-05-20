@@ -12,6 +12,16 @@
 <!DOCTYPE html>
 
 <%
+    String uname = (String)session.getAttribute("user");
+    
+    if(uname.endsWith("1")){
+        
+    }else{
+        response.sendRedirect("http://localhost:8080/PhoenixAirlinesDEA/");
+    }
+%>
+
+<%
 Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
@@ -67,7 +77,7 @@ ResultSet resultSet = null;
                     <a class="nav-link" href="../Flights/flights.jsp">Flights</a>
                     <a class="nav-link " href="../price.jsp">Pricing</a>
             <% 
-        String uname= (String)session.getAttribute("user");
+
         if(uname==null){%>
             <a class="nav-link" href="login.jsp">Login</a> <% }else{
             if(uname.endsWith("0")){%>
