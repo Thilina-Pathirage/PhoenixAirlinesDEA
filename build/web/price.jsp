@@ -184,7 +184,7 @@ h1{
                    <li class="list-group-item">pre-Order your Extra DutyFree</li>
                  </ul>
                  <div class="card-body">
-                   <a href="../index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
+                   <a href="./index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
                  </div>
                </div>
                
@@ -225,7 +225,7 @@ h1{
                    <li class="list-group-item">pre-Order your Extra DutyFree</li>
                  </ul>
                  <div class="card-body">
-                   <a href="../index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
+                   <a href="./index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
                  </div>
                </div>
                
@@ -266,7 +266,7 @@ h1{
                    <li class="list-group-item">pre-Order your Extra DutyFree</li>
                  </ul>
                  <div class="card-body">
-                   <a href="../index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
+                   <a href="./index.jsp" ><button type="submit" class="btn btn-dark" style="width: 100%"> Reserve </button></a>
                  </div>
                </div>
                
